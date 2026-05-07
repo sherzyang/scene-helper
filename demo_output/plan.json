@@ -1,0 +1,96 @@
+{
+  "title": "Introduction to Python for Data Science",
+  "steps": [
+    {
+      "action": "create_file",
+      "filename": "01_install_packages.py",
+      "content": "import os\n\n# Install necessary libraries\nos.system('pip install numpy pandas matplotlib scikit-learn tensorflow torch')\nprint('Installed necessary packages for data science.')"
+    },
+    {
+      "action": "run_command",
+      "command": "python 01_install_packages.py"
+    },
+    {
+      "action": "pause",
+      "seconds": 5
+    },
+    {
+      "action": "create_file",
+      "filename": "02_numpy_example.py",
+      "content": "import numpy as np\n\n# Create a NumPy array\narray = np.array([1, 2, 3, 4, 5])\nprint('NumPy Array:', array)\n\n# Perform basic operations\nmean_value = np.mean(array)\nprint('Mean Value:', mean_value)"
+    },
+    {
+      "action": "run_command",
+      "command": "python 02_numpy_example.py"
+    },
+    {
+      "action": "pause",
+      "seconds": 5
+    },
+    {
+      "action": "create_file",
+      "filename": "03_pandas_example.py",
+      "content": "import pandas as pd\n\n# Create a DataFrame\ndata = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [24, 30, 22]}\ndf = pd.DataFrame(data)\nprint('DataFrame:\n', df)\n\n# Calculate average age\naverage_age = df['Age'].mean()\nprint('Average Age:', average_age)"
+    },
+    {
+      "action": "run_command",
+      "command": "python 03_pandas_example.py"
+    },
+    {
+      "action": "pause",
+      "seconds": 5
+    },
+    {
+      "action": "create_file",
+      "filename": "04_matplotlib_example.py",
+      "content": "import matplotlib.pyplot as plt\n\n# Sample data\nx = [1, 2, 3, 4, 5]\ny = [2, 3, 5, 7, 11]\n\n# Create a line plot\nplt.plot(x, y)\nplt.title('Sample Line Plot')\nplt.xlabel('X-axis')\nplt.ylabel('Y-axis')\nplt.show()"
+    },
+    {
+      "action": "run_command",
+      "command": "python 04_matplotlib_example.py"
+    },
+    {
+      "action": "pause",
+      "seconds": 5
+    },
+    {
+      "action": "create_file",
+      "filename": "05_sklearn_example.py",
+      "content": "from sklearn.linear_model import LinearRegression\nimport numpy as np\n\n# Sample data\nX = np.array([[1], [2], [3], [4], [5]])\ny = np.array([2, 3, 5, 7, 11])\n\n# Create and train the model\nmodel = LinearRegression()\nmodel.fit(X, y)\n\n# Make a prediction\nprediction = model.predict([[6]])\nprint('Prediction for input 6:', prediction[0])"
+    },
+    {
+      "action": "run_command",
+      "command": "python 05_sklearn_example.py"
+    },
+    {
+      "action": "pause",
+      "seconds": 5
+    },
+    {
+      "action": "create_file",
+      "filename": "06_tensorflow_example.py",
+      "content": "import tensorflow as tf\n\n# Create a simple tensor\ntensor = tf.constant([[1, 2], [3, 4]])\nprint('Tensor:\n', tensor)\n\n# Perform a simple operation\nresult = tf.add(tensor, 10)\nprint('Tensor after addition:\n', result)"
+    },
+    {
+      "action": "run_command",
+      "command": "python 06_tensorflow_example.py"
+    },
+    {
+      "action": "pause",
+      "seconds": 5
+    },
+    {
+      "action": "create_file",
+      "filename": "07_pytorch_example.py",
+      "content": "import torch\n\n# Create a tensor\ntensor = torch.tensor([[1, 2], [3, 4]])\nprint('PyTorch Tensor:\n', tensor)\n\n# Perform a simple operation\nresult = tensor * 2\nprint('Tensor after multiplication:\n', result)"
+    },
+    {
+      "action": "run_command",
+      "command": "python 07_pytorch_example.py"
+    },
+    {
+      "action": "pause",
+      "seconds": 5
+    }
+  ]
+}
