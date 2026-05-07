@@ -1,0 +1,14 @@
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+RUNWAYML_API_SECRET = os.environ.get("RUNWAYML_API_SECRET", "")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
+
+DEFAULT_MODEL = "gen4.5"
+DEFAULT_RATIO = "1280:720"
+DEFAULT_DURATION = 5
+POLL_INTERVAL = 5  # seconds between task status checks
+OUTPUT_DIR = "output"
